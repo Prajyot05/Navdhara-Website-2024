@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 
 import 'swiper/css';
@@ -13,28 +13,23 @@ import RINGS from 'vanta/dist/vanta.rings.min.js';
 
 const Gallery = () => {
     
-  // const vantaRef = useRef(null);
-  // const swiperRef = useRef(null);
+  const [isNavigationEnabled, setIsNavigationEnabled] = useState(true);
 
-  // useEffect(() => {
-  //   const vantaEffect = RINGS({
-  //     el: vantaRef.current,
-  //     THREE,
-  //     mouseControls: true,
-  //     touchControls: true,
-  //     gyroControls: false,
-  //     minHeight: 200.00,
-  //     minWidth: 200.00,
-  //     scale: 1.00,
-  //     scaleMobile: 1.00,
-  //     backgroundColor: 0x111111,
-  //     color2: 0xffa400
-  //   });
+  const handleResize = () => {
+    if (window.innerWidth < 768) {
+      setIsNavigationEnabled(false);
+    } else {
+      setIsNavigationEnabled(true);
+    }
+  };
 
-  //   return () => {
-  //     if (vantaEffect) vantaEffect.destroy();
-  //   };
-  // }, []);
+  useEffect(() => {
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   
     return (
     // <div className='gallery' ref={vantaRef}>
@@ -44,7 +39,7 @@ const Gallery = () => {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        navigation={true}
+        navigation={isNavigationEnabled}
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
@@ -74,9 +69,6 @@ const Gallery = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img src="../../assets/slider-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="../../assets/slider-6.jpg" />
         </SwiperSlide>
       </Swiper>
     </div>

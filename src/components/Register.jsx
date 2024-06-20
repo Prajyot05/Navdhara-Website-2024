@@ -35,10 +35,13 @@ const Register = () => {
                 <div className="glass"></div>
                 <div className="card-content">
                     <div className="card-title">
-                        <h3>Event Name 1</h3>
+                        {/* <img src="../assets/poster_presentation.jpeg" alt="" /> */}
+                        <h3>Poster Presentation</h3>
                     </div>
                     <div className="card-desc">
-                        <h4>Desc</h4>
+                        <h4><span>Criteria: </span>FE Students Batch(2023 - 2024)</h4>
+                        <h4><span>Fees: </span>₹99/-</h4>
+                        <h4><span>Team: </span>1 - 6 Members</h4>
                     </div>
                     <div className="register-button-container">
                         <button className='register-btn'>Register</button>
@@ -49,10 +52,12 @@ const Register = () => {
                 <div className="glass"></div>
                 <div className="card-content">
                     <div className="card-title">
-                        <h3>Event Name 2</h3>
+                        <h3>Project Competition</h3>
                     </div>
                     <div className="card-desc">
-                        <h4>Desc</h4>
+                        <h4><span>Criteria: </span>FE Students Batch(2023 - 2024)</h4>
+                        <h4><span>Fees: </span>₹199/-</h4>
+                        <h4><span>Team: </span>1 - 6 Members</h4>
                     </div>
                     <div className="register-button-container">
                         <button className='register-btn'>Register</button>
