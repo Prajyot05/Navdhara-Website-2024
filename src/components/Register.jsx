@@ -1,9 +1,16 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import BIRDS from 'vanta/dist/vanta.birds.min';
+import BasicModal from './Modal';
+import { Button } from '@mui/material';
 
 const Register = () => {
   const vantaRef = useRef(null);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   useEffect(() => {
     let vantaEffect;
@@ -43,8 +50,12 @@ const Register = () => {
                         <h4><span>Fees: </span>₹99/-</h4>
                         <h4><span>Team: </span>1 - 6 Members</h4>
                     </div>
-                    <div className="register-button-container">
-                        <button className='register-btn'>Register</button>
+                    <div className="register-button-container" onClick={openModal}>
+                        {/* <button className='register-btn' onClick={openModal}>Register</button>
+                        <BasicModal isOpen={isModalOpen} onClose={closeModal} /> */}
+                        {/* <button className='register-btn' onClick={openModal}>Register</button> */}
+                        <BasicModal isModalOpen={isModalOpen} closeModal={closeModal} />
+                        
                     </div>
                 </div>
             </div>
@@ -59,8 +70,9 @@ const Register = () => {
                         <h4><span>Fees: </span>₹199/-</h4>
                         <h4><span>Team: </span>1 - 6 Members</h4>
                     </div>
+                    {/* <KonfHubButton /> */}
                     <div className="register-button-container">
-                        <button className='register-btn'>Register</button>
+                      <BasicModal isModalOpen={isModalOpen} closeModal={closeModal} />
                     </div>
                 </div>
             </div>

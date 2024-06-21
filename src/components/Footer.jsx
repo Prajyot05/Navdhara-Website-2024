@@ -13,11 +13,10 @@ function Footer() {
         <div className="contact">
             <h4>Student Coordinators:</h4>
             <h5>Yash Urade: +91 7249591566</h5>
-            <h5>Akshat Shrivastava (Technical): +91 7223085309</h5>
+            <h5>Akshat Shrivastava (Technical): +91 9205267201</h5>
             <h5>Aryan Waghmare: +91 8983002030</h5>
             <h5>Rupam Agrawal: +91 8237675364</h5>
         </div>
-        
     </div>
   )
 }
