@@ -40,7 +40,7 @@ const style = (theme) => ({
     },
 });
 
-export default function BasicModal() {
+export default function BasicModal({ticket}) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -57,7 +57,7 @@ export default function BasicModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <iframe src="https://konfhub.com/widget/navdhara-a-stream-of-innovation?desc=false&secondaryBg=F7F7F7&ticketBg=F7F7F7&borderCl=F7F7F7&bg=FFFFFF&fontColor=572148&ticketCl=572148&btnColor=fb5850&fontFamily=Prompt&borderRadius=10" id="konfhub-widget" title="Register for NAVDHARA - A Stream of Innovation" width="100%" height="500"></iframe>
+          <iframe src={`https://konfhub.com/widget/navdhara-a-stream-of-innovation?desc=false&tickets=${ticket},18081&secondaryBg=F7F7F7&ticketBg=F7F7F7&borderCl=F7F7F7&bg=FFFFFF&fontColor=572148&ticketCl=572148&btnColor=fb5850&fontFamily=Prompt&borderRadius=10`} id="konfhub-widget" title="Register for NAVDHARA - A Stream of Innovation" width="100%" height="500"></iframe>
         </Box>
       </Modal>
       

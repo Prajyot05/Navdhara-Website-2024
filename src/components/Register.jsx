@@ -51,10 +51,8 @@ const Register = () => {
                         <h4><span>Team: </span>1 - 6 Members</h4>
                     </div>
                     <div className="register-button-container" onClick={openModal}>
-                        {/* <button className='register-btn' onClick={openModal}>Register</button>
-                        <BasicModal isOpen={isModalOpen} onClose={closeModal} /> */}
-                        {/* <button className='register-btn' onClick={openModal}>Register</button> */}
-                        <BasicModal isModalOpen={isModalOpen} closeModal={closeModal} />
+                        {/* <BasicModal isModalOpen={isModalOpen} closeModal={closeModal} /> */}
+                        <BasicModal ticket={18079} />
                         
                     </div>
                 </div>
@@ -72,7 +70,7 @@ const Register = () => {
                     </div>
                     {/* <KonfHubButton /> */}
                     <div className="register-button-container">
-                      <BasicModal isModalOpen={isModalOpen} closeModal={closeModal} />
+                      <BasicModal ticket={18080} />
                     </div>
                 </div>
             </div>
