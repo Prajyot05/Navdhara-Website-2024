@@ -21,20 +21,20 @@
 /* Logo */
 
 .logo-container {
-  padding-top: 5rem;
+  padding-top: 15vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .logo-img {
-  height: 23vw;
+  height: 15vw;
 }
 
 .logo {
   position: relative;
   overflow: hidden;
-  width: 80%;
+  width: 50%;
   border-radius: 30%;
   display: flex;
   align-items: center;
@@ -46,7 +46,7 @@
   position: absolute;
   background-color: rgba(255, 255, 255, 0.6);
   height: 23.5vw;
-  width: 6vw;
+  width: 10%;
   border-radius: 50%;
   transform: skewX(-20deg);
   left: -10rem;
@@ -114,8 +114,8 @@ nav {
 
 /* Blur Circle */
 .blur-circle {
-  width: 40vw;
-  height: 40vw;
+  width: 50vw;
+  height: 50vw;
   border-radius: 50%;
   position: absolute;
   background-color: #ffcb43;
@@ -157,9 +157,9 @@ nav {
 }
 
 .sidebar {
-  gap: 3rem;
+  gap: 3vw;
   transition: margin ease 0.3s;
-  font-size: 1.4rem;
+  font-size: 2vw;
 }
 
 .sidebar h4 {
@@ -250,7 +250,7 @@ nav {
 .about-us {
   width: 100%;
   padding: 5vw 10vw;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   background-color: transparent;
 }
@@ -286,7 +286,8 @@ nav {
 /* Gallery Page */
 
 .gallery {
-  height: 100vh;
+  height: auto;
+  padding: 15vh 0;
   background-color: #111;
   position: relative;
 }
@@ -333,12 +334,12 @@ nav {
   min-height: 110vh;
   width: 100%;
   background-color: #111;
+  padding-bottom: 1rem;
 }
 
 .register h1 {
   font-size: 5rem;
   margin-left: 40vw;
-  margin-top: -7rem;
   border-bottom: 1px solid;
   padding: 0.5rem;
   font-size: 5rem;
@@ -357,14 +358,14 @@ nav {
 .card {
   position: relative;
   padding: 3rem 1.5rem;
-  border: orangered 0.125em solid;
-  transition: transform ease 0.5s;
+  border: orangered 2px solid;
+  transition: transform ease 0.5s, box-shadow 0.3s ease;
   border-radius: 20px;
-  box-shadow: 10px 10px 10px orangered;
 }
 
 .card:hover {
   transform: scale(1.1);
+  box-shadow: 10px 10px 10px orangered;
 }
 
 .card .glass {
@@ -429,7 +430,7 @@ nav {
   position: relative;
   padding: 10px 20px;
   border-radius: 7px;
-  border: 1px solid rgb(255, 92, 61);
+  border: 1px solid orangered;
   text-transform: uppercase;
   background: transparent;
   color: #fff;
@@ -444,7 +445,7 @@ nav {
 }
 
 .register-btn:hover {
-  background: rgb(255, 92, 61);
+  background: orangered;
   box-shadow: 0 0 30px 5px rgba(255, 140, 112, 0.815);
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -496,6 +497,19 @@ nav {
   -webkit-transition: box-shadow 0.2s ease-in;
   -moz-transition: box-shadow 0.2s ease-in;
   transition: box-shadow 0.2s ease-in;
+}
+
+.hostel-note{
+  background-color: #535255;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 10rem;
+  font-size: 1.2rem;
+}
+
+.hostel-note span{
+  color: #ffcb43;
+  font-size: 1.3rem;
 }
 
 /* Footer */
@@ -553,7 +567,7 @@ nav {
 
 @media (max-width: 1300px) {
   .page1 {
-    height: 80vh;
+    min-height: 80vh;
   }
 
   .blur-circle {
@@ -576,13 +590,14 @@ nav {
 
 @media (max-width: 1200px) {
   .blur-circle {
-    width: 80vw;
-    height: 80vw;
-    right: -30%;
+    width: 50vw;
+    height: 50vw;
+    right: -10%;
+    bottom: -10%;
   }
 
-  .about-us {
-    height: 110vh;
+  .logo{
+    width: 70%;
   }
 
   .logo-img {
@@ -614,84 +629,13 @@ nav {
   }
 }
 
-@media (max-width: 768px) {
-  .collegeName {
-    font-size: 1.2rem;
-  }
-
-  .collegeDetails {
-    font-size: 0.3rem;
-  }
-
-  .hamburger {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .sidebar {
-    font-size: 1rem;
-  }
-
-  .about-text h2 {
-    font-size: 2rem;
-  }
-
-  .about-text p {
-    font-size: 1rem;
-  }
-
-  .gallery h1 {
-    font-size: 3rem;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    padding: 2rem 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  nav {
-    height: auto;
-    padding: 1rem;
-  }
-
-  .collegeName {
-    font-size: 1rem;
-    margin-top: 0.5rem;
-  }
-
-  .collegeDetails {
-    font-size: 0.6rem;
-    padding: 0 0.5rem;
-  }
-
-  .logo-img {
-    height: 25vw;
-  }
-
-  .about-text h2 {
-    font-size: 1.5rem;
-  }
-
-  .about-text p {
-    font-size: 0.8rem;
-  }
-
-  .gallery h1 {
-    font-size: 2rem;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    padding: 1rem 0.5rem;
-  }
-}
-
 @media (max-width: 1024px) {
   nav {
     height: 7rem;
+  }
+
+  .logo{
+    width: 80%;
   }
 
   .hamburger {
@@ -709,13 +653,13 @@ nav {
   }
 
   .register {
-    min-height: 120vh;
+    min-height: 110vh;
     padding: 2rem 1rem;
   }
 
   .register h1 {
     font-size: 4rem;
-    margin-left: 20vw;
+    margin-left: 35vw;
     margin-top: -5rem;
   }
 
@@ -747,9 +691,63 @@ nav {
   .register-btn {
     font-size: 1.5rem;
   }
+
+  .hostel-note{
+    padding: 1rem 2rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .page1{
+    height: 40%;
+  }
+
+  .blur-circle{
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .collegeName {
+    font-size: 0.8rem;
+  }
+
+  .collegeDetails {
+    font-size: 0.3rem;
+  }
+
+  .hamburger {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .gallery{
+    min-height: 60vh;
+    padding-top: 5vh;
+  }
+
+  .gallery h1 {
+    margin-left: 35vw;
+    font-size: 3rem;
+  }
+
+  .sidebar {
+    font-size: 1rem;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    padding: 2rem 1rem;
+  }
+
   nav {
     height: 5rem;
   }
@@ -771,30 +769,14 @@ nav {
     font-size: 0.7rem;
   }
 
-  .collegeName {
-    font-size: 0.8rem;
-  }
-
   .register {
-    height: 130vh;
-  }
-
-  .about-us {
-    height: 120vh;
-  }
-
-  .gallery {
-    height: 80vh;
-  }
-
-  .gallery h1 {
-    margin-bottom: 3rem;
+    min-height: 120vh;
   }
 
   .register h1 {
     font-size: 3rem;
-    margin-left: 32vw;
-    margin-top: -10rem;
+    margin-left: 27vw;
+    margin-top: 0;
   }
 
   .cards {
@@ -824,6 +806,14 @@ nav {
     font-size: 1.2rem;
   }
 
+  .hostel-note{
+    font-size: 1rem;
+  }
+
+  .hostel-note span{
+    font-size: 1.1rem;
+  }
+
   .footer {
     padding: 1rem 3rem;
     gap: 5rem;
@@ -851,6 +841,11 @@ nav {
     height: 4rem;
   }
 
+  .blur-circle{
+    bottom: -10%;
+    right: -10%;
+  }
+
   .hamburger {
     padding-top: 3rem;
     height: 8rem;
@@ -876,6 +871,46 @@ nav {
     padding-top: 1.5rem;
   }
 
+  .page1{
+    min-height: 50vh;
+  }
+
+  .collegeName {
+    font-size: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .collegeDetails {
+    font-size: 0.6rem;
+    padding: 0 0.5rem;
+  }
+
+  .logo-img {
+    height: 25vw;
+  }
+
+  .about-us{
+    min-height: 60vh;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 0.8rem;
+  }
+
+  .gallery h1 {
+    margin-left: 32vw;
+    padding-top: 2rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    padding: 1rem 0.5rem;
+  }
+
   .hamburger {
     padding-top: 4rem;
     height: 7rem;
@@ -899,27 +934,18 @@ nav {
     font-size: 0.5rem;
   }
 
-  .collegeName {
-    font-size: 0.5rem;
-  }
-
   .gallery {
     height: 50vh;
   }
 
-  .gallery h1 {
-    margin-left: 32vw;
-    padding-top: 2rem;
-  }
-
-  .register {
-    min-height: 140vh;
+  .gallery h1{
+    font-size: 2rem;
+    margin-left: 37vw;
   }
 
   .register h1 {
     font-size: 2rem;
-    margin-left: 25vw;
-    margin-top: -2rem;
+    margin-left: 32vw;
   }
 
   .cards {
@@ -945,13 +971,17 @@ nav {
     padding: 0.3rem;
   }
 
+  .register{
+    width: 100%;
+  }
+
   .register-btn {
     font-size: 1rem;
   }
 
   .footer {
     flex-direction: column;
-    padding: 1rem;
+    padding: 3rem 1rem;
     gap: 1rem;
   }
 
@@ -977,6 +1007,10 @@ nav {
 }
 
 @media (max-width: 450px) {
+  .blur-circle{
+    bottom: -10%;
+    right: -15%;
+  }
   .page1 {
     height: 60vh;
   }
@@ -996,6 +1030,11 @@ nav {
   .collegeName {
     font-size: 0.5rem;
   }
+
+  .sidebar {
+    gap: 5vw;
+    font-size: 3vw;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1008,6 +1047,14 @@ nav {
 
   .gallery {
     height: 40vh;
+  }
+
+  .gallery h1{
+    text-align: center;
+  }
+
+  .register h1{
+    text-align: center;
   }
 
   .nav-left img,

@@ -23,7 +23,7 @@ const Register = () => {
         minHeight: 200.00,
         minWidth: 200.00,
         scale: 1.00,
-        scaleMobile: 1.00,
+        scaleMobile: 1.20,
         backgroundColor: 0x111111,
         color2: 0xffa400,
         quantity: 3.00
@@ -35,7 +35,7 @@ const Register = () => {
   }, []);
 
   return (
-    <div id="register" className='register' ref={vantaRef} style={{ width: '100%', height: '100vh' }}>
+    <div id="register" className='register' ref={vantaRef}>
         <h1>Register</h1>
         <div className="cards">
             <div className="card">
@@ -48,7 +48,7 @@ const Register = () => {
                     <div className="card-desc">
                         <h4><span>Criteria: </span>FE Students Batch(2023 - 2024)</h4>
                         <h4><span>Fees: </span>₹99/-</h4>
-                        <h4><span>Team: </span>1 - 6 Members</h4>
+                        <h4><span>Team: </span>1 - 3 Members</h4>
                     </div>
                     <div className="register-button-container" onClick={openModal}>
                         {/* <BasicModal isModalOpen={isModalOpen} closeModal={closeModal} /> */}
@@ -74,6 +74,9 @@ const Register = () => {
                     </div>
                 </div>
             </div>
+        </div>
+        <div className="hostel-note">
+          <span>One-Day Stay Facility Available:</span> We are offering a one-day hostel accommodation at your own expense, providing a convenient and comfortable option for students visiting from distant locations.
         </div>
     </div>
   );

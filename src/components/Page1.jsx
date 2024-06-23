@@ -29,6 +29,7 @@ function Page1() {
                     <Link to="about-us" spy={true} smooth={true} duration={1000}><h4>About</h4></Link>
                     <Link to="gallery" spy={true} smooth={true} duration={1000}><h4>Gallery</h4></Link>
                     <Link to="register" spy={true} smooth={true} duration={1000}><h4>Register</h4></Link>
+                    <Link to="footer" spy={true} smooth={true} duration={1000}><h4>Contact Us</h4></Link>
                 </aside>
             </div>
             <div className="logo-container">
