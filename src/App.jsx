@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Gallery from './components/Gallery'
 import Page1 from './components/Page1'
 import Register from './components/Register'
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
 

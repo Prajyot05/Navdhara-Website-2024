@@ -3,8 +3,8 @@ import React from 'react'
 function About() {
   return (
     <div className='about-us'>
-      <video src="../assets/bgclip.mp4" autoPlay loop muted></video>
-        <div className="about-text">
+      <div className="blur"></div>
+      <div className="about-text">
             <h2>What is Navdhara?</h2>
             <p>Navdhara is the state-level project and poster presentation competition exclusively
             for first-year students. This exceptional event provides a unique platform for
@@ -18,7 +18,8 @@ function About() {
 ⦾ Electronics and Telecommunication / Electronics / Electrical / Instrumentation <br />
 ⦾ Mechanical / Mechatronics / Robotics / Production / Manufacturing <br />
 ⦾ Civil / Environmental / Chemical</p>
-        </div>
+      </div>
+      <div className="blur"></div>
     </div>
   )
 }
