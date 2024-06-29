@@ -51,7 +51,8 @@ function Page1() {
             <div className="logo-container">
                 {/* <div className="blur-circle"></div> */}
                 <div className="logo">
-                    <img className='logo-img' src="../assets/logo.png" alt="" />
+                    {/* <img className='logo-img' src="../assets/logo.png" alt="" /> */}
+                    <img className='logo-img' src="../assets/logo-updated.png" alt="" />
                 </div>
             </div>
         </div>
