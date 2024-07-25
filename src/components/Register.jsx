@@ -75,9 +75,9 @@ const Register = () => {
                 </div>
             </div>
         </div>
-        <div className="hostel-note">
+        {/* <div className="hostel-note">
           <span>One-Day Stay Facility Available:</span> We are offering a one-day hostel accommodation at your own expense, providing a convenient and comfortable option for students visiting from distant locations.
-        </div>
+        </div> */}
     </div>
   );
 };

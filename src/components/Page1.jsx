@@ -24,6 +24,9 @@ function Page1() {
                     <img src="../assets/pccoer_logo.png" alt="" />
                 </div>
             </nav>
+            <div className="marque">
+            <marquee><span>IMPORTANT</span>: Considering heavy rainfall and crisis in Pune , we are postponing the program to 1 week. For any queries contact: +91 72495 91566</marquee>
+            </div>
             <div className="video-background">
                 <video autoPlay muted loop id="bgVideo">
                     <source src="../assets/bgclip.mp4" type="video/mp4" />
