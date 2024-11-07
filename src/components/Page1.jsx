@@ -25,7 +25,7 @@ function Page1() {
                 </div>
             </nav>
             <div className="marque">
-            <marquee><span>IMPORTANT</span>: Considering heavy rainfall and crisis in Pune , we are postponing the program to 1 week. For any queries contact: +91 72495 91566</marquee>
+            <marquee scrollamount="10"><span>IMPORTANT</span>: Event has been postponed to 3rd August.</marquee>
             </div>
             <div className="video-background">
                 <video autoPlay muted loop id="bgVideo">
